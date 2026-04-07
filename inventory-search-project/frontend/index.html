@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeerostock - Inventory Search</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <h1>Zeerostock</h1>
+      </div>
+      <p class="tagline">Surplus inventory, simplified.</p>
+    </header>
+
+    <main>
+      <section class="search-panel">
+        <form id="searchForm">
+          <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by product name..." autocomplete="off">
+          </div>
+          
+          <div class="filters">
+            <div class="filter-group">
+              <label for="categorySelect">Category</label>
+              <select id="categorySelect">
+                <option value="">All Categories</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Stationery">Stationery</option>
+              </select>
+            </div>
+            
+            <div class="filter-group price-filter">
+              <label>Price Range ($)</label>
+              <div class="price-inputs">
+                <input type="number" id="minPriceInput" placeholder="Min" min="0">
+                <span>-</span>
+                <input type="number" id="maxPriceInput" placeholder="Max" min="0">
+              </div>
+            </div>
+            
+            <button type="submit" class="primary-btn">Search Inventory</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="results-panel">
+        <div class="results-header">
+          <h2>Inventory List</h2>
+          <span id="resultsCount" class="badge">0 items found</span>
+        </div>
+        
+        <div id="errorState" class="alert hidden"></div>
+        
+        <div class="table-container">
+          <table id="resultsTable" class="hidden">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Supplier</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody">
+              <!-- Results go here via JS -->
+            </tbody>
+          </table>
+          
+          <div id="emptyState" class="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>No results found</h3>
+            <p>Try adjusting your search criteria or removing filters.</p>
+          </div>
+          
+          <div id="loadingState" class="loading-state hidden">
+            <div class="spinner"></div>
+            <p>Searching inventory...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
