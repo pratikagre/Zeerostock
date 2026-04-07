@@ -157,13 +157,16 @@ SQL was chosen because:
 
 
 # Backend
+
 cd backend
+
 npm install
+
 node server.js
 
 # Frontend
-Open index.html in browser
-```
+Open index.html in browse
+
 
 
 
