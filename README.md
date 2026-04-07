@@ -171,9 +171,7 @@ Open index.html in browse
 
 
 # 📸 Screenshots
-![Search UI](https://github.com/user-attachments/assets/xxxxx)
 
-![Results](https://github.com/user-attachments/assets/yyyyy)
 <img width="1901" height="848" alt="image" src="https://github.com/user-attachments/assets/f22dd768-990f-4708-9227-5fab08f544ba" />
 
 <img width="1902" height="646" alt="image" src="https://github.com/user-attachments/assets/fe7e114d-95c4-4a4c-a461-a60a4b2c295f" />
