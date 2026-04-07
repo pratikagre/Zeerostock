@@ -155,7 +155,7 @@ SQL was chosen because:
 
 # ▶️ How to Run Locally
 
-bash
+
 # Backend
 cd backend
 npm install
