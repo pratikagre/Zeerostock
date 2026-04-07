@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "inventory-search-project/backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "inventory-search-project/frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/inventory-search-project/backend/server.js"
+    },
+    {
+      "src": "/supplier",
+      "dest": "/inventory-search-project/backend/server.js"
+    },
+    {
+      "src": "/inventory(.*)",
+      "dest": "/inventory-search-project/backend/server.js"
+    },
+    {
+      "src": "/",
+      "dest": "/inventory-search-project/frontend/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/inventory-search-project/frontend/$1"
+    }
+  ]
+}

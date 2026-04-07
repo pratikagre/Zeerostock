@@ -138,6 +138,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Unified Server is running on port ${PORT}`);
-});
+// Export app for Vercel
+module.exports = app;
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Unified Server is running on port ${PORT}`);
+  });
+}
